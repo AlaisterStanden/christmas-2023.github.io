@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cold War Intelligence Room</title>
+    <link rel="stylesheet" href="coldwar.css" />
+  </head>
+  <body>
+    <div id="mainContent">
+      <!-- All content except the popup goes here -->
+      <div class="cd-image">
+        <img
+          src="pictures/office-cw.png"
+          usemap="#roommap"
+          alt="Intelligence Room"
+        />
+        <div class="overlay" id="mapOverlay"></div>
+        <div class="overlay" id="phoneOverlay" style="display: none">
+          <span id="closePhone" style="cursor: pointer">&times;</span> <!-- Close button for phoneOverlay -->
+          <div id="numberDisplay"></div>
+          <div id="numberPad">
+            <button id="clearButton">Clear</button>
+            <button class="num-button">1</button>
+            <button class="num-button">2</button>
+            <button class="num-button">3</button>
+            <button class="num-button">4</button>
+            <button class="num-button">5</button>
+            <button class="num-button">6</button>
+            <button class="num-button">7</button>
+            <button class="num-button">8</button>
+            <button class="num-button">9</button>
+            <button class="num-button">0</button>
+            <button id="callButton">Call</button>
+          </div>
+        </div>
+
+        <!-- Add more overlays as needed -->
+
+        <map name="roommap">
+          <!-- Update the coords with actual values -->
+          <area
+            shape="rect"
+            coords="800,250,1050,500"
+            href="#"
+            alt="Map"
+            id="map"
+          />
+          <area
+            shape="circle"
+            coords="300,400,50"
+            href="#"
+            alt="Phone"
+            id="phone"
+          />
+          <area
+            shape="rect"
+            coords="820,575,950,620"
+            href="#"
+            alt="Drawers"
+            id="drawers"
+          />
+        </map>
+      </div>
+    </div>
+
+    <!-- Popup outside of mainContent -->
+    <div id="imagePopup" class="image-popup">
+      <img id="popupImage" src="pictures/petersburg.png" alt="Popup Image" />
+      <div class="poi" id="poi1" style="top: 410px; left: 760px">
+        <span class="poi-text">Fortress</span>
+      </div>
+      <div class="poi" id="poi2" style="top: 700px; left: 500px">
+        <span class="poi-text">Hide</span>
+      </div>
+      <div class="poi" id="poi3" style="top: 610px; left: 810px">
+        <span class="poi-text">Cathedral</span>
+      </div>
+      <div class="poi" id="poi4" style="top: 270px; left: 1050px">
+        <span class="poi-text">Graveyard</span>
+      </div>
+      <!-- Add more POIs as needed -->
+    </div>
+
+    <div id="detailImageContainer" style="display: none">
+      <span id="closeDetailImage" style="cursor: pointer">&times;</span>
+      <!-- Close button -->
+      <img id="detailImage" src="" alt="Detailed View" />
+    </div>
+
+    <div id="videoOverlay" style="display: none">
+      <span id="closeVideo" style="cursor: pointer">&times;</span>
+      <video id="secretVideo" width="640" height="480" controls>
+        <source src="pictures/norad-defcon.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+
+    <div id="drawersImageContainer" style="display: none;">
+      <span id="closeDrawersImage" style="cursor: pointer">&times;</span>
+      <img id="drawersImage" src="" alt="Drawer Image" />
+  </div>
+
+  
+    <script src="coldwar.js"></script>
+  </body>
+</html>

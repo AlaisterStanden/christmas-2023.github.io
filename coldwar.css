@@ -1,0 +1,173 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.image-popup {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /*background-color: rgb(0,0,0); /* Fallback color */
+  /*background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.image-popup img {
+  margin: auto;
+  display: block;
+  width: 75%;
+  max-width: 60%;
+}
+
+.blur-background {
+  filter: blur(8px); /* Adjust the pixel value as needed */
+}
+
+.poi {
+  position: absolute; /* Position them over the image */
+  width: 10px; /* Adjust size as needed */
+  height: 10px; /* Adjust size as needed */
+  background-color: gold; /* POI color */
+  border-radius: 50%; /* Make them circular */
+  box-shadow: 0 0 8px gold; /* Golden glow effect */
+  z-index: 40;
+  cursor: pointer; /* Changes cursor to a pointer on hover */
+
+
+}
+
+.poi-text {
+  display: none; /* Hide text by default */
+  position: absolute; /* Positioning relative to the POI */
+  bottom: -40px; /* Position below the POI */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust horizontal centering */
+  /*background-color: white; /* Background color for text */
+  padding: 5px; /* Some padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visibility */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.poi:hover .poi-text {
+  display: block; /* Show text on hover */
+}
+
+#detailImageContainer {
+  display: none; /* Hidden by default, will be set to 'block' by JavaScript */
+  position: fixed; /* Overlay over other content */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center */
+  z-index: 20; /* Higher than other elements to appear on top */
+  border: 1px solid #ccc; /* Optional: for visibility */
+  background-color: white; /* Optional: background color */
+  padding: 10px; /* Optional: some padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: for better visibility */
+}
+
+#detailImage {
+  max-width: 90vw; /* Maximum width, adjust as needed */
+  max-height: 90vh; /* Maximum height, adjust as needed */
+  display: block; /* Ensures the image is a block-level element */
+}
+
+
+#closeDetailImage {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  font-size: 50px; /* Adjust as needed */
+  color: #000000; /* Adjust as needed */
+  cursor: pointer;
+}
+
+#phoneOverlay {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Ensure it's above other content */
+  background-color: white; /* Or any other suitable color */
+  padding: 20px;
+  border: 1px solid black;
+  display: none; /* Initially hidden */
+}
+
+
+#numberDisplay {
+  /* Styles for the display area */
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #000000;
+  min-height: 20px;
+  color: black
+}
+
+.num-button { 
+  /* Styles for number buttons */
+  margin: 5px;
+  padding: 10px;
+  
+}
+
+#callButton {
+  /* Styles for the call button */
+}
+
+
+#videoOverlay {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 40; /* Ensure it's above other content */
+  display: none; /* Initially hidden */
+}
+
+
+ #closePhone {
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  font-size: 30px;
+  color: #000000;
+  cursor: pointer;
+}
+
+#closeVideo{
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  font-size: 50px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#drawersImageContainer {
+  color: #000000;
+  display: none; /* Hidden by default, will be set to 'block' by JavaScript */
+  position: fixed; /* Overlay over other content */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  /*transform: translate(-50%, -50%); /* Adjust to center */
+  z-index: 20; /* Higher than other elements to appear on top */
+  /*border: 1px solid #ccc; /* Optional: for visibility */
+  /*background-color: white; /* Optional: background color */
+  padding-top: 10px; /* Optional: some padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: for better visibility */
+}
